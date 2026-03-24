@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: debian-toolbox-excluded
+  namespace: test-argo-redhat  
+spec:
+  containers:
+    - name: debian
+      image: 'ubuntu:26.04'
+      command:
+        - bash
+        - '-c'
+        - while true; do sleep 3600; done
+      resources: {}
